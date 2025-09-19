@@ -1,7 +1,7 @@
 import json
 from csv import DictWriter
 
-with open('PCTEExport.json', 'rb') as f:
+with open('InputData/PCTEExport.json', 'rb') as f:
     data = json.load(f)
 
 rows = []
@@ -12,7 +12,7 @@ for item in data['data']:
         'Status': item['status'],
     })
 
-with open('signoffs.csv', 'w', newline='') as f:
+with open('OutputData/signoffs.csv', 'w', newline='') as f:
     fieldnames = ['Name', 'Description', 'Status']
     writer = DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()

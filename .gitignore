@@ -205,3 +205,8 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+#Don't commit the data
+/InputData/*.json
+/OutputData/*.csv
+/OutputData/*.xls
